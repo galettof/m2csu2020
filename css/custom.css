@@ -1,3 +1,8 @@
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* pad sections to push internal links below navbar */
 section {
     padding-top: 4em;
@@ -11,7 +16,7 @@ section {
 }
 .card-header {
     padding: 0.5em;
-    background-color: rgba(0,0,0,0.06); 
+    background-color: rgba(0,0,0,0.05); 
 }
 
 /* Table padding */
@@ -35,6 +40,8 @@ border-top: none;
 }
 .nav-link {
     color: #ffffff !important;
+    border-radius:4px;
+    padding:3px;
 }
 .nav-link:hover {
     background-color: #69be28 !important;
@@ -51,10 +58,7 @@ border-top: none;
     color: #000000;
 }
 
-/* Reduce padding around navbar links and brand to shrink navbar */
-.nav-link {
-    padding-top:0;padding-bottom:0;
-}
+/* Reduce padding around navbar brand to shrink navbar */
 .navbar-brand {
     padding-top:0;padding-bottom:0;
 }
@@ -76,7 +80,7 @@ footer {
     margin-top: 4em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    background-color: rgba(0,0,0,0.06);
+    background-color: rgba(0,0,0,0.05);
     border-top: 1px solid rgba(0, 0, 0, 0.075);
 }
 
