@@ -84,6 +84,17 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.075);
 }
 
+/* changing carets for collapsible cards */
+
+[data-toggle="collapse"]:before {
+    font-family: 'FontAwesome';
+    content: "\f068";
+  }   
+[data-toggle="collapse"].collapsed:before {
+    font-family: 'FontAwesome';
+    content: "\f067";
+}
+
 /* embed a responsive google calendar */
 
 .googleCalendar{

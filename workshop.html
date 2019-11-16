@@ -39,7 +39,7 @@
               <li class="nav-item pr-lg-1">
 		<a class="nav-link rounded-sm text-nowrap px-2" href="#">Register</a>
               </li>
-	      <li class="nav-item dropdown pr-lg-1" data-toggle="collapse" data-target=".navbar-collapse.show">
+	      <li class="nav-item dropdown pr-lg-1" data-toggle="collapse nav-item" data-target=".navbar-collapse.show">
 		<a class="nav-link rounded-sm dropdown-toggle px-2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Workshop</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		  <a class="dropdown-item" href="workshop.html#overview">Overview</a>
@@ -48,7 +48,7 @@
 		  <a class="dropdown-item" href="workshop.html#participants">Participants</a>
 		</div>
 	      </li>
-	      <li class="nav-item dropdown pr-lg-1" data-toggle="collapse" data-target=".navbar-collapse.show">
+	      <li class="nav-item dropdown pr-lg-1" data-toggle="collapse nav-item" data-target=".navbar-collapse.show">
 		<a class="nav-link rounded-sm dropdown-toggle px-2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Local</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		  <a class="dropdown-item" href="#">Action</a>
@@ -89,28 +89,284 @@
 		<div class="card-header">
 		  <h5 class="mb-0">Proposed projects</h5>
 		</div>
-		<table class="table table-sm mb-0">
-		  <tbody>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		    <tr>
-		      <td><b>Project:</b> Description</td>
-		    </tr>
-		  </tbody>
-		</table>
+		<div class="card-body">
+		  We propose the following projects for the workshop. Please let us know about projects you are interested in, and if you would like to see them listed here.
+		</div>
+		<div class="accordion" id="accordionExample">
+		  <div class="card-header border-top" id="headingOne">
+		    <h6 class="mb-0">
+		      <a class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+			&nbsp;Invariants of reductive groups
+		      </a>
+		    </h6>
+		  </div>
+		  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+		    <div class="card-body">
+		      <p>
+			Given a reductive group acting linearly on a
+			polynomial ring, the ring of invariants is a
+			finitely generated algebra. One may wish to find
+			an explicit generating set for a ring of
+			invariants, compute its Hilbert series, or
+			provide bounds on the degrees of the
+			generators. All of this can be accomplished
+			computationally by means of algorithms such as
+			the ones described in [1,3]. The Macaulay2
+			package <tt>InvariantRing</tt> [2] implements
+			algorithms for finite groups. This project will
+			focus on implementing some of the available
+			algorithms for reductive groups; this includes
+			the general algorithm of Derksen-Kemper, as well
+			as more specialized algorithms for tori, Hilbert
+			series, and Reynolds operators of semisimple
+			groups.
+		      </p>
+
+		      <ol>
+			<li>Harm Derksen and Gregor
+			Kemper. <em>Computational invariant
+			theory</em>. Springer, Heidelberg, enlarged
+			edition,
+			2015. <a href="https://doi.org/10.1007/978-3-662-48422-7"
+			target="_blank">doi:10.1007/978-3-662-48422-7</a>
+			</li>
+			<li>Thomas Hawes. <em>Computing the invariant
+			ring of a finite group</em>. J. Softw. Algebra
+			Geom., 5:15–19,
+			2013. <a href="https://doi.org/10.2140/jsag.2013.5.15"
+			target="_blank">doi:10.2140/jsag.2013.5.15</a>
+			</li>
+			<li>Bernd Sturmfels. <em>Algorithms in
+			invariant theory</em>. SpringerWienNewYork,
+			Vienna, second edition,
+			2008. <a href="https://doi.org/10.1007/978-3-211-77417-5"
+			target="_blank">doi:10.1007/978-3-211-77417-5</a>
+			</li>
+		      </ol>
+		    </div>
+		  </div>
+		  
+		  <div class="card-header border-top" id="headingTwo">
+		    <h6 class="mb-0">
+		      <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			&nbsp;Coding theory computations
+		      </a>
+		    </h6>
+		  </div>
+		  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+		    <div class="card-body">
+		      <p>
+			Coding theory is a branch of information theory
+			that was originally developed to reliably
+			transmit information through a noisy
+			communication channel. Interesting parameters,
+			such as <em>dimension</em>
+			and <em>length</em>
+			, of
+			certain families of codes are related to
+			dimension and degree of certain algebraic
+			varieties, which can be studied using methods
+			of computational commutative algebra
+			(cf. [3]).  Another important concept is
+			the <em>minimum distance</em> , which is
+			related to the number of errors that can be
+			corrected when the information is
+			transmitted. This notion was generalized to
+			graded ideals in [2], which allows to find
+			lower bounds for minimum distance using
+			Gr\"obner bases and Hilbert functions. Recent
+			publications (e.g. [1,4]) show Macaulay2 is
+			routinely used to perform computations related
+			to these ideas. The goal of
+			this project is to review the existing
+			literature for procedures and algorithms that
+			can be coded and distributed as a package to
+			streamline future computations in coding theory
+			using Macaulay2.
+		      </p>
+
+		      <ol>
+			<li>Susan M. Cooper, Alexandra Seceleanu,
+			  &Scedil;tefan O. Toh&abreve;neanu, Maria Vaz
+			  Pinto, and Rafael H. Villarreal.
+			  <em>Generalized minimum distance functions
+			    and algebraic invariants of Geramita
+			    ideals.</em>  Adv. in Appl. Math.,
+			    112:101940, 2020.
+			  <a href="https://doi.org/10.1016/j.aam.2019.101940" target="_blank">doi:10.1016/j.aam.2019.101940</a>
+			</li>
+			<li>Jos&eacute; Mart&iacute;nez-Bernal, Yuriko
+			  Pitones, and Rafael
+			  H. Villarreal. <em>Minimum distance
+			  functions of graded ideals and
+			  Reed-Muller-type codes.</em>  J. Pure
+			  Appl. Algebra, 221(2):251–275, 2017.
+			  <a href="https://doi.org/10.1016/j.jpaa.2016.06.006" target="_blank">doi:10.1016/j.jpaa.2016.06.006</a>
+			</li>
+			<li>Carlos Renter&iacute;a-M&aacute;rquez,
+			  Aron Simis, and Rafael
+			  H. Villarreal. <em>Algebraic methods for
+			  parameterized codes and invariants of
+			  vanishing ideals over finite fields</em>.
+			  Finite Fields Appl., 17(1):81–104, 2011.
+			  <a href="https://doi.org/10.1016/j.ffa.2010.09.007" target="_blank">doi:10.1016/j.ffa.2010.09.007</a>
+			</li>
+			<li>Manuel Gonzalez Sarabia, Miguel
+			  E. Uribe-Paczka, Eliseo Sarmiento, and
+			  Carlos Renteria. <em>Relative generalized
+			  minimum distance function.</em>
+			  2019. <a href="https://arxiv.org/abs/1907.11324" target="_blank">arXiv:1907.11324</a>
+			</li>
+		      </ol>
+		    </div>
+		  </div>
+
+		  <div class="card-header border-top" id="headingThree">
+		    <h6 class="mb-0">
+		      <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			&nbsp;Symbolic Powers
+		      </a>
+		    </h6>
+		  </div>
+		  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+		    <div class="card-body">
+		      <p>
+			The current <tt>SymbolicPowers</tt> package
+			consists of various tools for computations
+			related to symbolic powers of ideals. This is
+			an ubiquitous subject within commutative
+			algebra, with connections to algebraic
+			geometry, combinatorics, and arithmetic
+			geometry, among other fields. There are
+			various open problems related to symbolic
+			powers that are the subjects of very active
+			current research, including the Containment
+			Problem, the Uniform Symbolic Topologies
+			problem, equality of symbolic and ordinary
+			powers, in particular with questions such as
+			the Packing Problem, or noetherianity of
+			symbolic Rees algebras [1]. One of the
+			obstacles to solving these problems is the
+			fact that actually computing symbolic powers
+			is fairly difficult, and this is an issue
+			the <tt>SymbolicPowers</tt> package aims to
+			improve. While symbolic powers can be computed
+			via primary decompositions of the
+			corresponding powers, computing primary
+			decompositions is notably slow, and
+			the <tt>SymbolicPowers</tt> package provides
+			functionality that bypasses the computation of
+			explicit primary decompositions. However, the
+			package's current functionality is mostly
+			directed at radical ideals in regular
+			rings. During the workshop, participants will
+			focus on the development of new algorithms for
+			computing symbolic powers based on the current
+			literature.
+		      </p>
+
+		      <ol>
+			<li>Hailong Dao, Alessandro De Stefani,
+			    Elo&iacute;sa Grifo, Craig Huneke, and
+			    Luis
+			    N&uacute;&ntilde;ez-Betancourt. <em>Symbolic
+			    powers of ideals.</em>  Springer
+			    Proceedings in Mathematics &
+			    Statistics. Springer, 2017.
+			  <a href="https://doi.org/10.1007/978-3-319-73639-6_13" target="_blank">doi:10.1007/978-3-319-73639-6_13</a>
+			</li>
+		      </ol>
+		      
+		    </div>
+		  </div>
+
+		  <div class="card-header border-top" id="headingFour">
+		    <h6 class="mb-0">
+		      <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+			&nbsp;Simplex method
+		      </a>
+		    </h6>
+		  </div>
+		  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+		    <div class="card-body">
+		      <p>
+			The goal of this package is to develop
+			functionality for using the simplex method and
+			other techniques for solving combinatorial
+			optimization problems.  Such problems arise
+			frequently for many researchers who use
+			Macaulay2 (in toric geometry or
+			Boij-S&ouml;derberg theory [1], for example),
+			and folding these functions into Macaulay2
+			would allow them to be more easily used by
+			researchers.  This package will also introduce
+			functionality for solving Linear Programming
+			problems in characteristic
+			<i>p</i>.
+		      </p>
+
+		      <ol>
+			<li>David Eisenbud and Frank-Olaf
+			    Schreyer. <em>Betti numbers of graded
+			    modules and cohomology of vector
+			    bundles.</em>  J. Amer. Math. Soc.,
+			    22(3):859–888, 2009.
+			  <a href="https://doi.org/10.1090/S0894-0347-08-00620-6"
+			  target="_blank">doi:10.1090/S0894-0347-08-00620-6</a>
+			</li>
+		      </ol>
+		      
+		    </div>
+		  </div>
+
+		  <div class="card-header border-top" id="headingFive">
+		    <h6 class="mb-0">
+		      <a class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+			&nbsp;Algebraic Statistics
+		      </a>
+		    </h6>
+		  </div>
+		  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+		    <div class="card-body">
+		      <p>
+			Currently there is a single package dealing
+			with statistics in
+			Macaulay2, <tt>Markov</tt>. This package
+			constructs Markov ideals, arising from
+			Bayesian networks in Statistics. Due to the
+			development of Algebraic Statistics, a new
+			package would be useful in order to
+			consolidate and extend methods to calculate
+			Maximum Likelihood Estimate degree for
+			specific ideals and varieties; enhance and
+			refine homotopy continuation methods for
+			different parametrizations of statistical
+			models [1,2].
+		      </p>
+
+		      <ol>
+			<li>Carlos Am&eacute;ndola, Nathan Bliss,
+			  Isaac Burke, Courtney R. Gibbons, Martin
+			  Helmer, Serkan Ho&scedil;ten, Evan D. Nash,
+			  Jose Israel Rodriguez, and Daniel
+			  Smolkin. <em>The maximum likelihood degree
+			  of toric varieties.</em>  J. Symbolic
+			  Comput., 92:222–242, 2019.
+			  <a href="https://doi.org/10.1016/j.jsc.2018.04.016"
+			  target="_blank">doi:10.1016/j.jsc.2018.04.016</a>
+			</li>
+			<li>Jose Israel Rodriguez. <em>Solving the
+			    likelihood equations to compute Euler
+			    obstruction functions.</em>  Springer,
+			    Cham, 2018.
+			  <a href="https://doi.org/10.1007/978-3-319-96418-8_48"
+			     target="_blank">doi:10.1007/978-3-319-96418-8_48</a>
+			</li>
+		      </ol>
+		    </div>
+		  </div>
+
+		</div>
 	      </div>
 	    </section>
 
@@ -135,7 +391,16 @@
 		<table class="table table-sm mb-0">
 		  <tbody>
 		    <tr>
-		      <td>TBA</td>
+		      <td>David Eisenbud &mdash; University of California, Berkeley</td>
+		    </tr>
+		    <tr>
+		      <td>Daniel Grayson &mdash; University of Illinois at Urbana-Champaign</td>
+		    </tr>
+		    <tr>
+		      <td>Gregory Smith &mdash; Queen’s University</td>
+		    </tr>
+		    <tr>
+		      <td>Michael Stillman &mdash; Cornell University</td>
 		    </tr>
 		  </tbody>
 		</table>
