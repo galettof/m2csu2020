@@ -86,11 +86,11 @@ footer {
 
 /* changing carets for collapsible cards */
 
-[data-toggle="collapse"]:before {
+.card-header [data-toggle="collapse"]:before {
     font-family: 'FontAwesome';
     content: "\f068";
   }   
-[data-toggle="collapse"].collapsed:before {
+.card-header [data-toggle="collapse"].collapsed:before {
     font-family: 'FontAwesome';
     content: "\f067";
 }
